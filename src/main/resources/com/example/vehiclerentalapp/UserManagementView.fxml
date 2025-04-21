@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?> <!-- Ensure this import is present -->
+
+<?import java.lang.String?>
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.vehiclerentalapp.UserManagementController" spacing="10" alignment="CENTER">
+    <Label text="User Management" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    <HBox spacing="10">
+        <Label text="Username:"/>
+        <TextField fx:id="usernameField" promptText="Enter username"/>
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Password:"/>
+        <PasswordField fx:id="passwordField" promptText="Enter password"/>
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Role:"/>
+        <ComboBox fx:id="roleComboBox" promptText="Select role">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Admin"/>
+                    <String fx:value="Employee"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+    </HBox>
+    <HBox spacing="10">
+        <Button text="Add User" onAction="#addUser"/>
+        <Button text="Update User" onAction="#updateUser"/>
+        <Button text="Delete User" onAction="#deleteUser"/>
+    </HBox>
+    <Label fx:id="statusLabel" style="-fx-text-fill: red;"/>
+</VBox>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vehiclerentalapp.VehicleController" spacing="10" style="-fx-padding: 10;">
+    <Label text="Vehicle Management" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="vehicleTable">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="brandColumn" text="Brand" prefWidth="100"/>
+            <TableColumn fx:id="modelColumn" text="Model" prefWidth="100"/>
+            <TableColumn fx:id="categoryColumn" text="Category" prefWidth="100"/>
+            <TableColumn fx:id="rentalPriceColumn" text="Price/Day" prefWidth="100"/>
+            <TableColumn fx:id="availabilityColumn" text="Availability" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Label text="Brand:"/>
+        <TextField fx:id="brandField" promptText="e.g., Toyota"/>
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Model:"/>
+        <TextField fx:id="modelField" promptText="e.g., Camry"/>
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Category:"/>
+        <TextField fx:id="categoryField" promptText="e.g., Sedan"/>
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Price/Day:"/>
+        <TextField fx:id="rentalPriceField" promptText="e.g., 50.0"/>
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Availability:"/>
+        <ChoiceBox fx:id="availabilityBox"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button fx:id="addButton" text="Add Vehicle" onAction="#addVehicle" styleClass="button"/>
+        <Button fx:id="updateButton" text="Update Vehicle" onAction="#updateVehicle" styleClass="button"/>
+        <Button fx:id="deleteButton" text="Delete Vehicle" onAction="#deleteVehicle" styleClass="button"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Search:"/>
+        <TextField fx:id="searchField" promptText="Search by brand or model" onAction="#searchVehicles"/>
+        <Button fx:id="searchButton" text="Search" onAction="#searchVehicles" styleClass="button"/>
+        <Button fx:id="clearSearchButton" text="Clear Search" onAction="#clearSearch" styleClass="button"/>
+    </HBox>
+</VBox>

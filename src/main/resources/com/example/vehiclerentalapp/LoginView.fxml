@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.vehiclerentalapp.LoginController"
+      spacing="10" alignment="CENTER"
+      styleClass="login-view"
+      stylesheets="@../styles.css">
+    <HBox alignment="CENTER_LEFT" spacing="20">
+        <ImageView fitWidth="100" fitHeight="100" styleClass="logo-image">
+            <image>
+                <Image url="@../images/logo.gif"/>
+            </image>
+        </ImageView>
+        <VBox spacing="10" alignment="CENTER">
+            <Label text="Vehicle Rental App" styleClass="label"/>
+            <HBox spacing="10">
+                <Label text="Username:" styleClass="label"/>
+                <TextField fx:id="usernameField" promptText="Enter username"/>
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Password:" styleClass="label"/>
+                <PasswordField fx:id="passwordField" promptText="Enter password"/>
+            </HBox>
+            <HBox styleClass="button-container">
+                <Button text="Login" onAction="#handleLogin" styleClass="button"/>
+            </HBox>
+            <Label fx:id="errorLabel" styleClass="label"/>
+        </VBox>
+    </HBox>
+</VBox>

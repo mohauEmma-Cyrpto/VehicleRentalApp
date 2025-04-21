@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.vehiclerentalapp.MainController"
+      spacing="10" alignment="CENTER"
+      stylesheets="@../styles.css">
+    <Label text="Reports" styleClass="label"/>
+    <Button text="Generate Vehicle Report" onAction="#generateVehicleReport" styleClass="button"/>
+    <Button text="Generate Customer Report" onAction="#generateCustomerReport" styleClass="button"/>
+    <Button text="Generate Booking Report" onAction="#generateBookingReport" styleClass="button"/>
+</VBox>

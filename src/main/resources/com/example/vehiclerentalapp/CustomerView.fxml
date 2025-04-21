@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vehiclerentalapp.CustomerController" spacing="10" style="-fx-padding: 10;">
+    <Label text="Customer Management" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="customerTable">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="150"/>
+            <TableColumn fx:id="contactInfoColumn" text="Contact Info" prefWidth="150"/>
+            <TableColumn fx:id="drivingLicenseColumn" text="License Number" prefWidth="150"/>
+            <TableColumn fx:id="rentalHistoryColumn" text="Rental History" prefWidth="200"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Label text="Name:"/>
+        <TextField fx:id="nameField" promptText="e.g., John Doe"/>
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Contact Info:"/>
+        <TextField fx:id="contactInfoField" promptText="e.g., john@example.com"/>
+    </HBox>
+    <HBox spacing="10">
+        <Label text="License Number:"/>
+        <TextField fx:id="drivingLicenseField" promptText="e.g., DL12345"/>
+    </HBox>
+    <HBox spacing="10">
+        <Label text="Rental History:"/>
+        <TextField fx:id="rentalHistoryField" promptText="e.g., Booking IDs"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button fx:id="addButton" text="Add Customer" onAction="#addCustomer" styleClass="button"/>
+        <Button fx:id="updateButton" text="Update Customer" onAction="#updateCustomer" styleClass="button"/>
+        <Button fx:id="deleteButton" text="Delete Customer" onAction="#deleteCustomer" styleClass="button"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Search:"/>
+        <TextField fx:id="searchField" promptText="Search by name or contact" onAction="#searchCustomers"/>
+        <Button fx:id="searchButton" text="Search" onAction="#searchCustomers" styleClass="button"/>
+        <Button fx:id="clearSearchButton" text="Clear Search" onAction="#clearSearch" styleClass="button"/>
+    </HBox>
+</VBox>

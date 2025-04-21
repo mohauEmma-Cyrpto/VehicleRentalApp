@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.vehiclerentalapp.MainController"
+            stylesheets="@../styles.css">
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <ImageView fitWidth="100" fitHeight="100" styleClass="logo-image">
+                <image>
+                    <Image url="@../images/logo.gif"/>
+                </image>
+            </ImageView>
+            <Label text="Vehicle Rental App" styleClass="label"/>
+        </VBox>
+    </top>
+    <center>
+        <TabPane fx:id="mainTabPane">
+            <tabs>
+                <Tab fx:id="vehiclesTab" text="Vehicles">
+                    <fx:include source="VehicleView.fxml"/>
+                </Tab>
+                <Tab fx:id="customersTab" text="Customers">
+                    <fx:include source="CustomerView.fxml"/>
+                </Tab>
+                <Tab fx:id="bookingsTab" text="Bookings">
+                    <fx:include source="BookingView.fxml"/>
+                </Tab>
+                <Tab fx:id="paymentsTab" text="Payments">
+                    <fx:include source="PaymentView.fxml"/>
+                </Tab>
+                <Tab fx:id="reportsTab" text="Reports">
+                    <fx:include source="ReportsView.fxml"/>
+                </Tab>
+                <Tab fx:id="usersTab" text="User Management">
+                    <fx:include source="UserManagementView.fxml"/>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

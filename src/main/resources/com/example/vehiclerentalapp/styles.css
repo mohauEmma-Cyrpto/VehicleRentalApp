@@ -1,0 +1,59 @@
+/* Default background for main app screens */
+.root {
+    -fx-background-image: url("images/main-background.gif");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* Ensure TabPane and its children are transparent to show the background */
+.tab-pane {
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab-content-area {
+    -fx-background-color: transparent;
+}
+
+/* Unique background for login screen */
+.login-view {
+    -fx-background-image: url("images/login-background.gif");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* Style for the logo ImageView */
+.logo-image {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 0);
+}
+
+/* Style for HBox containing buttons */
+.button-container {
+    -fx-spacing: 10;
+    -fx-alignment: center;
+}
+
+/* Button styling */
+.button {
+    -fx-font-size: 14px;
+    -fx-padding: 8 16;
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.button:hover {
+    -fx-background-color: #45a049;
+}
+
+.label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.text-field, .password-field, .choice-box {
+    -fx-pref-width: 200px;
+    -fx-font-size: 14px;
+}
